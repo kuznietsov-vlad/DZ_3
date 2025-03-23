@@ -10,8 +10,8 @@ def normalize_phone(phone_number: list):
         if num_cleaned.startswith('38'):
             num_cleaned = '+38' + num_cleaned
         num_array.append(num_cleaned)
-    return num_array
 
+    return ', '.join(num_array)
 
 raw_numbers = [
     "067\\t123 4567",

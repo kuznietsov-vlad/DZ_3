@@ -3,9 +3,9 @@ from datetime import datetime, date
 
 def string_to_date(date_string):
     try:
-        return datetime.strptime(date_string, "%Y.%m.%d").date()
+        return datetime.strptime(date_string, "%Y-%m-%d").date()
     except ValueError:
-        print("Please write a correct date format: YYYY.MM.DD")
+        print("Please write a correct date format: YYYY-MM-DD")
         return None
 
 def get_days_from_today(date):
@@ -17,5 +17,5 @@ def get_days_from_today(date):
     difference = (today - date_obj).days
     return difference
 
-vlados='13.14.2000'
+vlados='2020-10-09'
 print(get_days_from_today(vlados))
